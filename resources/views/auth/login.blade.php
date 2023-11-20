@@ -14,7 +14,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{__('Email')}}" required autofocus>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{__('Email')}}" required autofocus autocomplete="email">
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -27,7 +27,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{__('Password')}}" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{__('Password')}}" required autocomplete="current-password">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
